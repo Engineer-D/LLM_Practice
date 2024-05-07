@@ -69,7 +69,7 @@ print("\n\n\n")
 revised = ""
 # test the single generate agent
 for chunk in generate.stream({"messages": [request, 
-                                           HumanMessage(content=research), 
-                                           AIMessage(content=reflection)]}):
+                                           AIMessage(content=research), 
+                                           HumanMessage(content=reflection)]}):
     print(chunk.content, end="")
     revised += chunk.content
